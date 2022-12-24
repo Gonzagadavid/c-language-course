@@ -45,3 +45,6 @@
 
 # IDE generated
 .idea
+
+# others files
+*.pdf
