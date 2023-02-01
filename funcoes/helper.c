@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <string.h>
 // Crie uma função que recebe como parâmetro um número inteiro e 
 // devolve o seu dobro
 
@@ -27,4 +27,28 @@ void dateFormat(int day, int month, int year) {
   };
 
   printf("%d de %s de %d\n", day, months[month - 1], year);
+}
+
+// Crie uma função que receb como parâmetro um valor inteiro e gere como saida
+// n linhas com pontos de exclamação, conforme o exemplo abaixo (n = 5)
+/*
+!
+!!
+!!!
+!!!
+!!!!
+!!!!!
+*/
+
+void exclamation_lines(int n) {
+
+  char lines[n];
+
+   memset(lines, 0, n + 10);
+
+  for(int i = 0; i < n; ++i) {
+      lines[i] = '!';
+      printf("%s\n", lines);
+  }
+
 }

@@ -10,5 +10,7 @@ int main () {
 
   dateFormat(29,1,2023);
 
+  exclamation_lines(5);
+
   return 0;
 }
