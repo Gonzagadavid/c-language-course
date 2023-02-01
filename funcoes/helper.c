@@ -1,7 +1,22 @@
 #include <stdio.h>
-#include <string.h>
 // Crie uma função que recebe como parâmetro um número inteiro e 
 // devolve o seu dobro
+
+char months[12][10] = {
+  {"janeiro"},
+  {"fevereiro"},
+  {"março"},
+  {"abril"},
+  {"maio"},
+  {"junho"},
+  {"julho"},
+  {"agosto"},
+  {"setembro"},
+  {"novembro"},
+  {"outubro"},
+  {"dezembro"},
+};
+
 
 int doub(int number) {
   return number * 2;
@@ -11,20 +26,8 @@ int doub(int number) {
 // no formato textual por extenso
 
 void dateFormat(int day, int month, int year) {
-  char months[12][10] = {
-    {"janeiro"},
-    {"fevereiro"},
-    {"março"},
-    {"abril"},
-    {"maio"},
-    {"junho"},
-    {"julho"},
-    {"agosto"},
-    {"setembro"},
-    {"novembro"},
-    {"outubro"},
-    {"dezembro"},
-  };
+  extern char months[12][10];
+
 
   printf("%d de %s de %d\n", day, months[month - 1], year);
 }
@@ -43,8 +46,6 @@ void dateFormat(int day, int month, int year) {
 void exclamation_lines(int n) {
 
   char lines[n];
-
-   memset(lines, 0, n + 10);
 
   for(int i = 0; i < n; ++i) {
       lines[i] = '!';
